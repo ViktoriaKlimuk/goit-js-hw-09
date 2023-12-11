@@ -7,6 +7,8 @@ let timerColor;
 start.addEventListener("click", handleColor);
 function handleColor(e) {
     timerColor = setInterval(changeColor, 1000)
+    start.setAttribute("disabled", true);
+    stop.removeAttribute("disabled")
 };
 function changeColor() {
     const color = getRandomHexColor();
@@ -20,5 +22,7 @@ function getRandomHexColor() {
 
 stop.addEventListener("click", handleStop);
 function handleStop(e) {
-    clearInterval(timerColor)
+    clearInterval(timerColor);
+    stop.setAttribute("disabled", true);
+    start.removeAttribute("disabled")
 }
