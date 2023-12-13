@@ -4,6 +4,7 @@ const delayInput = document.querySelector('input[name="delay"]');
 const stepInput = document.querySelector('input[name="step"]');
 const amountInput = document.querySelector('input[name="amount"]');
 const btn = document.querySelector('button[type="submit"]');
+const form = document.querySelector("form")
 
 btn.addEventListener("click", handleClick);
 
@@ -37,6 +38,7 @@ function handleClick(event) {
           `Rejected promise ${position+1} in ${delay}ms`
           );
       });
+    form.reset()
   }
 }
 
