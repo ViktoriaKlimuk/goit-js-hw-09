@@ -38,8 +38,8 @@ function handleClick(event) {
           `Rejected promise ${position+1} in ${delay}ms`
           );
       });
-    form.reset()
   }
+  form.reset()
 }
 
 
